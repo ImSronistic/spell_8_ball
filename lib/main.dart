@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -16,24 +17,31 @@ class BallPage extends StatelessWidget {
         backgroundColor: Colors.blue[900],
       ),
       backgroundColor: Colors.blue[800],
-      body: ball(),
+      body: Ball(),
     );
   }
 }
 
-class ball extends StatefulWidget {
+class Ball extends StatefulWidget {
   @override
-  _ballState createState() => _ballState();
+  _BallState createState() => _BallState();
 }
 
-class _ballState extends State<ball> {
+class _BallState extends State<Ball> {
+  int ballNumber = 1;
+  void askMeAny() {
+    setState(() {
+      ballNumber = Random().nextInt(4) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
           child: TextButton(
-        child: Image.asset('images/ball1.png'),
-        onPressed: () {print('I got clicked.')},
+        child: Image.asset('images/ball$ballNumber.png'),
+        onPressed: askMeAny,
       )),
     );
   }
