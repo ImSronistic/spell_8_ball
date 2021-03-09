@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+![Screenshot_20210309_182427](https://user-images.githubusercontent.com/40174034/110473969-232e7980-8105-11eb-99b9-eb47a6b3b8b5.png)
+
 ## Getting Started
 
 This app is an example of a Spell Ball App to answer all your question in Yes/No.
